@@ -1,0 +1,10 @@
+
+#include "martini.itp"
+#include "molecule_0.itp"
+
+[ system ]
+Title of the system in water
+
+[ molecules ]
+molecule_0    300
+W               26657
