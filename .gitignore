@@ -177,6 +177,3 @@ cython_debug/
 .DS_Store
 
 logs/
-
-md_sims/fibers/*
-md_sims/spheres/*
