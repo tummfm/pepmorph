@@ -1,3 +1,4 @@
+.xtc filter=lfs diff=lfs merge=lfs -text
 *.xtc filter=lfs diff=lfs merge=lfs -text
 *.xvg filter=lfs diff=lfs merge=lfs -text
 *.xvg !text !filter !merge !diff
