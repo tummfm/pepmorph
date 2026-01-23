@@ -1,0 +1,7 @@
+Cohort,Target,Generated,Hits,HitRate,CallsPerHit
+PepMorph (sphere-targeted),spheres,4800,76,"0.0158 [0.0127, 0.0198]","63.2 [50.6, 78.9]"
+Length-cond. unconditional (sphere lengths),spheres,4800,3,"0.0006 [0.0002, 0.0018]","1600.0 [544.6, 4704.2]"
+Random sampling (5-10 aa),spheres,4800,0,"0.0000 [0.0000, 0.0008]","inf [1250.5, inf]"
+PepMorph (fiber-targeted),fibers,4800,29,"0.0060 [0.0042, 0.0087]","165.5 [115.4, 237.5]"
+Length-cond. unconditional (fiber lengths),fibers,4800,7,"0.0015 [0.0007, 0.0030]","685.7 [332.5, 1415.2]"
+Random sampling (5-10 aa),fibers,4800,4,"0.0008 [0.0003, 0.0021]","1200.0 [467.1, 3085.4]"
