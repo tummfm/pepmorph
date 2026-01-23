@@ -1,0 +1,145 @@
+type,target,peptide,run,RMOI,aggregation_propensity,matches_morphology_visual,notes_visual
+bigger_box_1230,fiber,CVSAPGIFHC,run_1,0.627750,2.218755,no, wide spherical aggregate
+bigger_box_1230,fiber,CVSAPGIFHC,run_2,0.372436,2.124790,yes, fiber
+bigger_box_1230,fiber,CVSAPGIFHC,run_3,0.305611,2.258243,yes, fiber
+martini2,fiber,CVSAPGIFHC,run_1,0.585417,2.196160,yes, intertwined fibers
+martini2,fiber,CVSAPGIFHC,run_2,0.358312,2.330696,yes, fiber
+martini2,fiber,CVSAPGIFHC,run_3,0.440230,2.277483, yes, wide fiber
+original,fiber,CVSAPGIFHC,run_1,0.295179,2.022145,yes, elongated fiber
+original,fiber,CVSAPGIFHC,run_2,0.409692,1.947726,yes, wide elongated fiber
+original,fiber,CVSAPGIFHC,run_3,0.425011,1.907187,yes, slightly narrow center but elongated fiber
+bigger_box_1230,sphere,FFIFI,run_1,0.848214,3.139391,yes, two spherical aggregates
+bigger_box_1230,sphere,FFIFI,run_2,0.723784,3.380584,yes, one spherical aggregate with pi-pi stacking
+bigger_box_1230,sphere,FFIFI,run_3,0.787619,3.288418,yes, one big spherical aggregate and a small one
+martini2,sphere,FFIFI,run_1,0.380256,2.634777,no, elongated aggregate almost disconnected
+martini2,sphere,FFIFI,run_2,0.438211,2.693477,no, elongated spherical aggregate
+martini2,sphere,FFIFI,run_3,0.463917,2.708535,no, elongated spherical aggregate
+original,sphere,FFIFI,run_1,0.896117,2.784343,yes, spherical
+original,sphere,FFIFI,run_2,0.811735,2.842389,yes, spherical
+original,sphere,FFIFI,run_3,0.815658,2.878914,yes, spherical
+bigger_box_1230,sphere,FIFIF,run_1,0.251501,2.755886, no, squashed vesicle (spherical) aggregate disk-like
+bigger_box_1230,sphere,FIFIF,run_2,0.458552,2.598843, yes, one vesicle (spherical) aggregate and another with a sheet-like saliency - clearly not converged
+bigger_box_1230,sphere,FIFIF,run_3,0.812490,2.617676, yes, clear vesicle (spherical)
+martini2,sphere,FIFIF,run_1,0.648441,2.709765,no, slightly elongated spherical aggregate
+martini2,sphere,FIFIF,run_2,0.477630,2.780612,no, elongated aggregate
+martini2,sphere,FIFIF,run_3,0.731430,2.793574,yes, spherical aggregate
+original,sphere,FIFIF,run_1,0.263922,2.336651,no, sheet
+original,sphere,FIFIF,run_2,0.265839,2.341804,no, sheet
+original,sphere,FIFIF,run_3,0.819299,2.555382,yes, spherical
+bigger_box_1230,sphere,FIVVIF,run_1,0.672260,3.078198, yes, slightly elongated spherical aggregate
+bigger_box_1230,sphere,FIVVIF,run_2,0.938771,3.031249, yes, spherical aggregate
+bigger_box_1230,sphere,FIVVIF,run_3,0.888829,3.096796, yes, spherical aggregate
+martini2,sphere,FIVVIF,run_1,0.679461,2.444144, yes, slightly elongated spherical aggregate
+martini2,sphere,FIVVIF,run_2,0.494906,2.513550, no, elongated rod-like aggregate
+martini2,sphere,FIVVIF,run_3,0.163881,2.417718, no, rod aggregate
+original,sphere,FIVVIF,run_1,0.817350,2.628269, yes, spherical
+original,sphere,FIVVIF,run_2,0.911663,2.628596, yes, spherical
+original,sphere,FIVVIF,run_3,0.727875,2.622588, yes, spherical
+bigger_box_1230,sphere,FVIFF,run_1,0.867546,3.465831, yes, two same-sized spherical aggregates
+bigger_box_1230,sphere,FVIFF,run_2,0.886728,3.795353, yes, one spherical aggregate
+bigger_box_1230,sphere,FVIFF,run_3,0.912470,3.490658, yes, one large spherical aggregate and one small
+martini2,sphere,FVIFF,run_1,0.376932,2.703902, no, curved elongated aggregate
+martini2,sphere,FVIFF,run_2,0.604733,2.681188, no, elongated aggregate
+martini2,sphere,FVIFF,run_3,0.403887,2.561488, no, elongated aggregate
+original,sphere,FVIFF,run_1,0.866560,3.053138, yes, spherical
+original,sphere,FVIFF,run_2,0.918252,3.130336, yes, spherical
+original,sphere,FVIFF,run_3,0.834801,2.991832, yes, spherical
+bigger_box_1230,sphere,FVIVI,run_1,0.914433,2.394338, yes, spherical aggregate
+bigger_box_1230,sphere,FVIVI,run_2,0.805038,2.262207, yes, one larger spherical aggregate and one smaller amorphous aggregate
+bigger_box_1230,sphere,FVIVI,run_3,0.766299,2.282010, yes, two slightly irregular spherical aggregates
+martini2,sphere,FVIVI,run_1,0.883392,2.207758, yes, spherical aggregate
+martini2,sphere,FVIVI,run_2,0.710811,2.195949, yes, slightly elongated spherical aggregate
+martini2,sphere,FVIVI,run_3,0.743926,2.165752, yes, slightly squashed spherical aggregate
+original,sphere,FVIVI,run_1,0.847842,2.164393, yes, spherical
+original,sphere,FVIVI,run_2,0.860373,2.187212, yes, spherical
+original,sphere,FVIVI,run_3,0.767637,2.108530, yes, spherical
+bigger_box_1230,fiber,HYVSGRFLIY,run_1,0.491449,2.331071, no, irregular net 
+bigger_box_1230,fiber,HYVSGRFLIY,run_2,0.489621,2.301220, no , irregular net
+bigger_box_1230,fiber,HYVSGRFLIY,run_3,0.601442,2.268632, no, irregular net
+martini2,fiber,HYVSGRFLIY,run_1,0.641597,2.131933, no, irregular net
+martini2,fiber,HYVSGRFLIY,run_2,0.494654,2.176099, no, irregular net 
+martini2,fiber,HYVSGRFLIY,run_3,0.581127,2.125404, no, irregular net 
+original,fiber,HYVSGRFLIY,run_1,0.520591,2.176169, yes, wider fiber
+original,fiber,HYVSGRFLIY,run_2,0.497972,2.187840, no, net-like 
+original,fiber,HYVSGRFLIY,run_3,0.469435,2.273340, yes, wide fiber
+bigger_box_1230,fiber,ILSFPDKVTY,run_1,0.571591,2.327359, no, net aggregate
+bigger_box_1230,fiber,ILSFPDKVTY,run_2,0.328245,2.370490, yes, intertwined fiber
+bigger_box_1230,fiber,ILSFPDKVTY,run_3,0.333313,2.433966, yes, fiber
+martini2,fiber,ILSFPDKVTY,run_1,0.628674,2.178830, no, amorphous aggregate
+martini2,fiber,ILSFPDKVTY,run_2,0.509280,2.190600, no, irregular net
+martini2,fiber,ILSFPDKVTY,run_3,0.351719,2.247232, yes, fiber-like structure
+original,fiber,ILSFPDKVTY,run_1,0.458935,2.134727, yes, two intertwined fibers
+original,fiber,ILSFPDKVTY,run_2,0.442462,2.241865, yes, wide fiber
+original,fiber,ILSFPDKVTY,run_3,0.295566,2.206807, yes, fiber
+bigger_box_1230,sphere,IVLFIF,run_1,0.644153,2.628937, yes, iregular spherical blob
+bigger_box_1230,sphere,IVLFIF,run_2,0.532983,2.641761, no, two elongated aggregates
+bigger_box_1230,sphere,IVLFIF,run_3,0.832931,2.631608, yes, two spherical aggregates
+martini2,sphere,IVLFIF,run_1,0.732317,2.471035, yes, spherical aggregate
+martini2,sphere,IVLFIF,run_2,0.744813,2.530088, yes, spherical aggregate
+martini2,sphere,IVLFIF,run_3,0.764265,2.506767, yes, spherical aggregate
+original,sphere,IVLFIF,run_1,0.766112,2.407728,yes, spherical
+original,sphere,IVLFIF,run_2,0.815530,2.454420,yes, spherical
+original,sphere,IVLFIF,run_3,0.681601,2.505383,yes, slightly elongated spherical aggregate
+bigger_box_1230,fiber,LDIYNHPFF,run_1,0.472834,2.722034, no, irregular net
+bigger_box_1230,fiber,LDIYNHPFF,run_2,0.314204,2.946005, no, amorphous aggregate
+bigger_box_1230,fiber,LDIYNHPFF,run_3,0.522861,2.941506, no, amorphous aggregate
+martini2,fiber,LDIYNHPFF,run_1,0.505830,2.060385, no, amorphous aggregate
+martini2,fiber,LDIYNHPFF,run_2,0.523046,2.070807, no, amorphous aggregate
+martini2,fiber,LDIYNHPFF,run_3,0.541837,1.997080, no, amorphous aggregate
+original,fiber,LDIYNHPFF,run_1,0.278190,2.585237, yes, fiber 
+original,fiber,LDIYNHPFF,run_2,0.279883,2.619542, yes, fiber 
+original,fiber,LDIYNHPFF,run_3,0.236803,2.606587, yes, fiber
+bigger_box_1230,fiber,LICWTGHCHH,run_1,0.580073,2.316089, yes, one irregular fiber and a smaller amorphous aggregate
+bigger_box_1230,fiber,LICWTGHCHH,run_2,0.393470,2.430614, yes, fiber
+bigger_box_1230,fiber,LICWTGHCHH,run_3,0.368086,2.408609, no, amorphous aggregate
+martini2,fiber,LICWTGHCHH,run_1,0.463186,2.308113, yes, fiber-like structure
+martini2,fiber,LICWTGHCHH,run_2,0.591505,2.283051, yes, one fiber-like structure and some aggregates almost connected
+martini2,fiber,LICWTGHCHH,run_3,0.521027,2.249966, no, amorphous aggregate
+original,fiber,LICWTGHCHH,run_1,0.577594,2.183927, yes, fiber connected in the middle
+original,fiber,LICWTGHCHH,run_2,0.423991,2.311389, yes, wide fiber
+original,fiber,LICWTGHCHH,run_3,0.525428,2.181859, yes, curved fiber
+bigger_box_1230,sphere,LIIVF,run_1,0.522772,2.076138, no, elongated blob aggregate
+bigger_box_1230,sphere,LIIVF,run_2,0.274296,2.077915, yes, two spherical aggregates slightly connected
+bigger_box_1230,sphere,LIIVF,run_3,0.764142,2.073149, yes, two spherical aggregates
+martini2,sphere,LIIVF,run_1,0.753463,2.129853, yes, spherical aggregate
+martini2,sphere,LIIVF,run_2,0.815205,2.209712, yes, spherical aggregate
+martini2,sphere,LIIVF,run_3,0.806880,2.093946, yes, spherical aggregate
+original,sphere,LIIVF,run_1,0.730597,1.949825,yes, spherical
+original,sphere,LIIVF,run_2,0.753638,1.955719,yes, spherical
+original,sphere,LIIVF,run_3,0.860195,2.044179,yes, spherical
+bigger_box_1230,fiber,PFAIPYCSTP,run_1,0.421041,2.755600, yes, fiber with a branch
+bigger_box_1230,fiber,PFAIPYCSTP,run_2,0.746520,2.875681, yes, fibrillar aggregate with big spherical blob in the middle
+bigger_box_1230,fiber,PFAIPYCSTP,run_3,0.251130,2.907058, yes, fiber
+martini2,fiber,PFAIPYCSTP,run_1,0.396355,2.272409, no, amorphous aggregate
+martini2,fiber,PFAIPYCSTP,run_2,0.568058,2.234991, yes, intertwined fibers
+martini2,fiber,PFAIPYCSTP,run_3,0.495055,2.307035, yes, intertwined fibers
+original,fiber,PFAIPYCSTP,run_1,0.291260,2.606192,yes, fiber
+original,fiber,PFAIPYCSTP,run_2,0.896545,2.622762,no, spherical
+original,fiber,PFAIPYCSTP,run_3,0.621539,2.516091,no, spherical with connected parts
+bigger_box_1230,fiber,QIRTYDFLVF,run_1,0.551572,2.226541, no, net-like structure
+bigger_box_1230,fiber,QIRTYDFLVF,run_2,0.663889,2.230579, no, irregular net-like structure
+bigger_box_1230,fiber,QIRTYDFLVF,run_3,0.586616,2.261069, no, irregular net-like structure
+martini2,fiber,QIRTYDFLVF,run_1,0.707159,2.056015, no, networked aggregation
+martini2,fiber,QIRTYDFLVF,run_2,0.646434,2.093972, no, networked aggregation
+martini2,fiber,QIRTYDFLVF,run_3,0.512786,2.064547, yes, connected fibers
+original,fiber,QIRTYDFLVF,run_1,0.817163,2.154567,yes, interconnected fibers
+original,fiber,QIRTYDFLVF,run_2,0.530622,2.161391,no, net-like structure
+original,fiber,QIRTYDFLVF,run_3,0.714594,2.164387,yes, interconnected fibers
+bigger_box_1230,fiber,VFLVPVDFKY,run_1,0.470332,3.090855, no, elongated vesicle
+bigger_box_1230,fiber,VFLVPVDFKY,run_2,0.300738,3.133521, yes, curved irregular fiber
+bigger_box_1230,fiber,VFLVPVDFKY,run_3,0.383872,3.194369, no, elongated vesicle
+martini2,fiber,VFLVPVDFKY,run_1,0.342167,2.332020, yes, irregular fiber
+martini2,fiber,VFLVPVDFKY,run_2,0.579566,2.205562, no, networked aggregation
+martini2,fiber,VFLVPVDFKY,run_3,0.531707,2.285638, no, elongated irregular aggregate
+original,fiber,VFLVPVDFKY,run_1,0.351668,2.740966, yes, fiber
+original,fiber,VFLVPVDFKY,run_2,0.534394,2.801216, no, vesicle
+original,fiber,VFLVPVDFKY,run_3,0.856114,2.825777, no, vesicle
+bigger_box_1230,sphere,VIFIL,run_1,0.632302,2.012792, no, two iregular spherical aggregates
+bigger_box_1230,sphere,VIFIL,run_2,0.673099,2.074980, yes, approximately spherical aggregate
+bigger_box_1230,sphere,VIFIL,run_3,0.518229,1.998366, no,  irregular approximately spherical aggregate
+martini2,sphere,VIFIL,run_1,0.838095,2.262709, yes, spherical aggregate
+martini2,sphere,VIFIL,run_2,0.815143,2.242608, yes, spherical aggregate
+martini2,sphere,VIFIL,run_3,0.856348,2.270269, yes, spherical aggregate
+original,sphere,VIFIL,run_1,0.705582,1.924503,no, irregular approximately spherical aggregate
+original,sphere,VIFIL,run_2,0.557639,1.991081,no, irregular and slightly elongated spherical aggregate
+original,sphere,VIFIL,run_3,0.741084,1.966068,yes, approximately spherical aggregate

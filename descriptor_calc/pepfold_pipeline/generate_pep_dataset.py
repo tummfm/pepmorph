@@ -2,9 +2,7 @@
 import os
 import glob
 import csv
-import math
 import numpy as np
-from Bio import SeqIO
 from Bio.PDB import PDBParser, DSSP, Polypeptide, PDBIO
 import warnings
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -20,7 +18,7 @@ HYDRO_SCALE = {
 }
 
 def compute_beta_sheet_fraction(pdb_filename, structure, dssp_exe='mkdssp'):
-    """Compute the fraction of residues in beta-strand using DSSP."""
+    """Compute the fraction of residues in beta‐strand using DSSP."""
     model = structure[0]
     try:
         dssp_obj = DSSP(model, pdb_filename, dssp=dssp_exe)
@@ -47,7 +45,6 @@ def compute_hydrophobic_moment(sequence, structure):
     count = 0
     for residue in chain:
         resname = residue.get_resname().strip()
-        # Convert three-letter code to one-letter code if possible.
         try:
             index = Polypeptide.three_to_index(resname)
             one_letter = Polypeptide.index_to_one(index)
@@ -56,16 +53,15 @@ def compute_hydrophobic_moment(sequence, structure):
         if one_letter not in HYDRO_SCALE:
             continue
         h_val = HYDRO_SCALE[one_letter]
-        # Get CA coordinate.
+
         if 'CA' not in residue:
             continue
         ca = np.array(residue['CA'].get_coord())
-        # Try to get CB direction.
+
         if 'CB' in residue:
             cb = np.array(residue['CB'].get_coord())
             vec = cb - ca
         else:
-            # For glycine or missing CB, define a default vector:
             vec = np.array([1.0, 0.0, 0.0])
         norm = np.linalg.norm(vec)
         if norm == 0:
@@ -75,7 +71,7 @@ def compute_hydrophobic_moment(sequence, structure):
         count += 1
     if count == 0:
         return 0.0
-    # Normalize by the number of residues considered.
+
     return np.linalg.norm(cum_vec) / count
 
 def compute_net_charge(sequence):
@@ -134,7 +130,6 @@ def process_peptide_folder(folder_path):
         print(f"Error parsing or saving clean PDB file {clean_pdb_file}: {e}")
         return None
 
-    # Compute metrics.
     beta_sheet_fraction = compute_beta_sheet_fraction(clean_pdb_file, structure)
     hydrophobic_moment = compute_hydrophobic_moment(sequence, structure)
     net_charge = compute_net_charge(sequence)
@@ -167,7 +162,7 @@ def main():
     output_file = "peptide_metrics.csv"
     fieldnames = [
         "peptide_id", "sequence", "beta_sheet_fraction",
-        "hydrophobic_moment", "net_charge",
+        "hydrophobic_moment", "net_charge"
     ]
     with open(output_file, "w", newline="") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -178,4 +173,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
