@@ -39,6 +39,8 @@ def process_chunk(chunk_records, chunk_index, start_index, sa_dir, label_prefix)
     uid = str(os.getuid())
     gid = str(os.getgid())
     chunk_label = f"{label_prefix}_chunk{chunk_index}"
+
+    print(f'Processing {chunk_label}.')
     
     cmd = [
         "docker", "run", "-it", "--rm",

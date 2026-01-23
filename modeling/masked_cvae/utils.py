@@ -141,9 +141,9 @@ def vae_loss_fn_with_cond(
     logits, tgt, mu, logvar, prior_mu, prior_logvar,
     bc_logit, cc_pred, mask_logit,
     cond, mask, pad_idx, kl_weight,
-    lambda_mask=1.0, lambda_bin=2.0, lambda_cont=1.0,
+    lambda_mask=1.0, lambda_bin=2.0, lambda_cont=1.0, label_smoothing=0.1
 ):
-    recon = nn.CrossEntropyLoss(ignore_index=pad_idx, label_smoothing=0.1)(
+    recon = nn.CrossEntropyLoss(ignore_index=pad_idx, label_smoothing=label_smoothing)(
         logits.view(-1, logits.size(-1)), tgt.view(-1)
     )
 

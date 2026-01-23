@@ -1,0 +1,4 @@
+sequence,beta_sheet_fraction,hydrophobic_moment,net_charge,sequence_3,ap,assembly
+FFIFFL,0.0,1.2,0, Phe-Phe-Ile-Phe-Phe-Leu,2.2114902400853635,17.889389038085938
+IIFVI,0.0,1.2819999999999998,0, Ile-Ile-Phe-Val-Ile,2.194745075721025,8.80289363861084
+FFVII,0.0,1.244,0, Phe-Phe-Val-Ile-Ile,2.287872084530115,12.817026138305664

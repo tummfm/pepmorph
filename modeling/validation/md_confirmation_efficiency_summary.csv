@@ -1,0 +1,3 @@
+cohort,morphology,n_peptides,n_success,success_rate,success_rate_ci_lo,success_rate_ci_hi,calls_per_confirmed,calls_per_confirmed_ci_lo,calls_per_confirmed_ci_hi
+PepMorph (MD validated),fibers,15,15,1.0,0.7961107336956521,1.0,1.0,1.0,1.2561066666666667
+PepMorph (MD validated),spheres,14,14,1.0,0.7846829880728186,1.0,1.0,1.0,1.2744
