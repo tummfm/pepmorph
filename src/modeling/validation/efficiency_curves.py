@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import warnings
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -171,9 +172,18 @@ def bootstrap_permutation_curves(
     if best_mat is None:
         return budgets, mean_hits, lo_hits, hi_hits, None
 
-    mean_best = best_mat.mean(axis=0)
-    lo_best = np.percentile(best_mat, 2.5, axis=0)
-    hi_best = np.percentile(best_mat, 97.5, axis=0)
+    if hit_flags.sum() == 0:
+        return budgets, mean_hits, lo_hits, hi_hits, None
+
+    best_mat = np.where(np.isfinite(best_mat), best_mat, np.nan)
+    if np.all(np.isnan(best_mat)):
+        return budgets, mean_hits, lo_hits, hi_hits, None
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", RuntimeWarning)
+        mean_best = np.nanmean(best_mat, axis=0)
+        lo_best = np.nanpercentile(best_mat, 2.5, axis=0)
+        hi_best = np.nanpercentile(best_mat, 97.5, axis=0)
     return budgets, mean_hits, lo_hits, hi_hits, (mean_best, lo_best, hi_best)
 
 
@@ -322,10 +332,14 @@ def plot_pepfold_curves(
     print("Wrote", out1)
 
     plt.figure(figsize=(7.2, 4.8))
+    plotted = False
     for r in subset:
         hit = r["data"]["proxy_hit"].to_numpy().astype(int)
         score = r["score_best_among_hits"]
         budgets, _, _, _, best = bootstrap_permutation_curves(hit, score=score, n_boot=n_boot, seed=seed)
+        if best is None:
+            print(f"Skipping best-AP curve (no proxy hits): {r['name']}")
+            continue
         mean_best, lo_best, hi_best = best
 
         mean_best = np.where(np.isfinite(mean_best), mean_best, np.nan)
@@ -334,6 +348,12 @@ def plot_pepfold_curves(
 
         plt.plot(budgets, mean_best, label=r["name"])
         plt.fill_between(budgets, lo_best, hi_best, alpha=0.2)
+        plotted = True
+
+    if not plotted:
+        print("No best-AP curves to plot for target:", target)
+        plt.close()
+        return
 
     plt.xlabel("PEP-FOLD calls (AP-pass peptides attempted)")
     plt.ylabel("Best predicted AP among proxy-feasible hits")
@@ -364,14 +384,22 @@ def plot_calls_per_hit_bar(
     lo = d[f"{metric}_ci_lo"].to_numpy()
     hi = d[f"{metric}_ci_hi"].to_numpy()
 
+    finite = np.isfinite(y)
+    if not finite.any():
+        print("No finite calls-per-hit values for target:", target)
+        return
+
     yerr = np.vstack([y - lo, hi - y])
+    yerr[:, ~finite] = 0.0
     yerr = np.nan_to_num(yerr, nan=0.0, posinf=0.0, neginf=0.0)
 
     fig, ax = plt.subplots(figsize=(7.2, 3.8))
     x = np.arange(len(d))
 
     colors = [TEAL[4]] * len(d)
-    ax.bar(x, y, color=colors, alpha=0.9, linewidth=0)
+    y_plot = y.copy()
+    y_plot[~finite] = np.nan
+    ax.bar(x, y_plot, color=colors, alpha=0.9, linewidth=0)
 
     ax.errorbar(x, y, yerr=yerr, fmt="none", ecolor="#3F3F3F", elinewidth=1.2, capsize=3)
 
@@ -424,9 +452,12 @@ def plot_prob_hit_vs_budget(
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
     for i, row in d.reset_index(drop=True).iterrows():
         name = row["cohort"]
+        if not np.isfinite(p[i]):
+            print(f"Skipping probability curve (non-finite hit rate): {name}")
+            continue
         y = prob_at_least_one_hit(p[i], budgets)
-        ylo = prob_at_least_one_hit(plo[i], budgets)
-        yhi = prob_at_least_one_hit(phi[i], budgets)
+        ylo = prob_at_least_one_hit(plo[i], budgets) if np.isfinite(plo[i]) else y * np.nan
+        yhi = prob_at_least_one_hit(phi[i], budgets) if np.isfinite(phi[i]) else y * np.nan
 
         color = TEAL[min(5, i + 1)]
         ax.plot(budgets, y, label=name, linewidth=2.0, color=color)

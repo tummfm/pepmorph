@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Optional
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parents[2]
+REPO_ROOT = SCRIPT_DIR.parents[1]
 SRC_DIR = REPO_ROOT / "src"
 
 if str(REPO_ROOT) not in sys.path:
@@ -13,7 +13,7 @@ if str(REPO_ROOT) not in sys.path:
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from pepmorph.shared.plot_style import TEAL, set_paper_style, teal_palette
+from shared.plot_style import TEAL, set_paper_style, teal_palette
 
 DATA_RAW = REPO_ROOT / "data" / "raw"
 DATA_PROCESSED = REPO_ROOT / "data" / "processed"

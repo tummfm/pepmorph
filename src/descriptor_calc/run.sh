@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 ARTIFACTS_DIR="${REPO_ROOT}/artifacts"
 DESC_ARTIFACTS="${ARTIFACTS_DIR}/descriptor_calc"
 

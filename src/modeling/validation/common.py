@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Optional
 
 VALIDATION_DIR = Path(__file__).resolve().parent
-REPO_ROOT = VALIDATION_DIR.parents[3]
+REPO_ROOT = VALIDATION_DIR.parents[2]
 ARTIFACTS_DIR = REPO_ROOT / "artifacts"
 VALIDATION_ARTIFACTS = ARTIFACTS_DIR / "validation"
 MODEL_DIR = VALIDATION_DIR.parent
@@ -21,7 +21,7 @@ if str(MODEL_DIR) not in sys.path:
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from pepmorph.shared.plot_style import TEAL, set_paper_style, teal_palette
+from shared.plot_style import TEAL, set_paper_style, teal_palette
 
 
 def _install_alias(alias: str, target_module: object, submodules: tuple[str, ...]) -> None:
