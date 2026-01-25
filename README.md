@@ -46,7 +46,6 @@ This repository implements the **PepMorph** pipeline for the paper *Morphology-S
 conda env create -f environment.yml
 conda activate pepmorph
 ```
-If you need CPU-only, remove `pytorch-cuda` from `environment.yml` and reinstall.
 
 2) Prepare the processed dataset:
 ```bash
