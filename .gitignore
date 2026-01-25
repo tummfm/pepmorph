@@ -185,6 +185,10 @@ md_sims/spheres/*
 *.npz
 *.trajout.xtc*
 
+*.pt
+*.pth
+!artifacts/models/**/*.pt
+
 *.pdf
 *.svg
 *.jpg
