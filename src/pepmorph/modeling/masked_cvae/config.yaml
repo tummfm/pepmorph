@@ -1,0 +1,35 @@
+# Default CVAE training configuration
+seed: 42
+split_seed: 42
+data_csv: data/processed/merged_all.csv
+splits_dir: data/splits
+output_dir: artifacts/models/masked_cvae
+checkpoint_name: finetuned_cvae.pt
+
+# Data augmentation + masking
+random_augmentation: 15000
+mask_prob: 0.5
+
+# Architecture
+latent_dim: 24
+encoder_hidden_dim: 256
+decoder_hidden_dim: 256
+num_encoder_layers: 2
+num_decoder_layers: 2
+nhead: 8
+dropout: 0.1
+
+# Training schedule
+batch_size: 2048
+num_epochs: 250
+learning_rate: 0.001
+weight_decay: 0.0001
+kl_weight: 0.05
+warmup_epochs: 100
+n_cycles: 10
+lambda_bin: 2.0
+lambda_cont: 0.5
+
+# Sampler weights (imbalance correction)
+sampler_beta_weight: 10.0
+sampler_sa_weight: 2.0

@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "test_size": 0.1,
+  "val_size": 0.1,
+  "stratify_col": "length",
+  "n_total": 161120,
+  "n_train": 130507,
+  "n_val": 14501,
+  "n_test": 16112
+}
