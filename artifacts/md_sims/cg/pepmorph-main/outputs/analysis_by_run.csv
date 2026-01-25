@@ -1,0 +1,352 @@
+peptide,class,run,aggregation_propensity,RMOI,has_aggregated,matches_morphology,is_target,visual_morphology
+EFAHHYNQIL,fiber_no_ap,run_1,1.41307,0.66013,False,False,no,
+EFAHHYNQIL,fiber_no_ap,run_2,1.428751,0.506904,False,False,no,
+EFAHHYNQIL,fiber_no_ap,run_3,1.472918,0.522966,False,False,no,
+VSVQPMECH,fiber_no_ap,run_1,1.385169,0.40773,False,False,no,
+VSVQPMECH,fiber_no_ap,run_2,1.372005,0.424076,False,False,no,
+VSVQPMECH,fiber_no_ap,run_3,1.375784,0.495854,False,False,no,
+LYRPAPLEL,fiber_no_ap,run_1,1.725839,0.328363,False,False,yes,"fiber"
+LYRPAPLEL,fiber_no_ap,run_2,1.727192,0.303444,False,False,yes,"fiber"
+LYRPAPLEL,fiber_no_ap,run_3,1.695796,0.39803,False,False,yes,"fiber"
+LQICQWAA,fiber_no_ap,run_1,1.835404,0.47229,True,False,no,"amorphous aggregate"
+LQICQWAA,fiber_no_ap,run_2,1.776925,0.402329,False,False,no,"amorphous aggregate"
+LQICQWAA,fiber_no_ap,run_3,1.88287,0.568631,True,False,no,"amorphous aggregate"
+DAPFIMAY,fiber_no_ap,run_1,1.643816,0.632853,False,False,no,
+DAPFIMAY,fiber_no_ap,run_2,1.636244,0.52581,False,False,no,
+DAPFIMAY,fiber_no_ap,run_3,1.686914,0.679358,False,False,no,
+LCPDSILVN,fiber_no_ap,run_1,1.09938,0.886631,False,False,no,
+LCPDSILVN,fiber_no_ap,run_2,1.115523,0.797719,False,False,no,
+LCPDSILVN,fiber_no_ap,run_3,1.118354,0.811368,False,False,no,
+GPCIDQCSF,fiber_no_ap,run_1,1.642062,0.34607,False,False,no,
+GPCIDQCSF,fiber_no_ap,run_2,1.593371,0.603653,False,False,no,
+GPCIDQCSF,fiber_no_ap,run_3,1.570775,0.418202,False,False,no,
+HALNGGTW,fiber_no_ap,run_1,1.810493,0.35144,True,False,no,"very irregular extended aggregate"
+HALNGGTW,fiber_no_ap,run_2,1.799189,0.556691,False,False,no,"elongated aggregate"
+HALNGGTW,fiber_no_ap,run_3,1.831736,0.322029,True,True,yes,"curved fiber"
+VYHEIDGFK,fiber_no_ap,run_1,1.569399,0.335075,False,False,no,
+VYHEIDGFK,fiber_no_ap,run_2,1.54942,0.370435,False,False,no,
+VYHEIDGFK,fiber_no_ap,run_3,1.562175,0.459424,False,False,no,
+AWIRYDE,fiber_no_ap,run_1,2.071116,0.632445,True,False,yes,"intertwined fibers"
+AWIRYDE,fiber_no_ap,run_2,2.070333,0.433991,True,False,yes,"fiber"
+AWIRYDE,fiber_no_ap,run_3,2.027387,0.412544,True,False,yes,"curved fiber"
+PEPFLNKTVM,fiber_no_ap,run_1,1.565555,0.473804,False,False,no,
+PEPFLNKTVM,fiber_no_ap,run_2,1.56324,0.452664,False,False,no,
+PEPFLNKTVM,fiber_no_ap,run_3,1.557698,0.54082,False,False,no,
+EVLLAHAW,fiber_no_ap,run_1,1.424575,0.825569,False,False,no,
+EVLLAHAW,fiber_no_ap,run_2,1.349197,0.665952,False,False,no,
+EVLLAHAW,fiber_no_ap,run_3,1.390561,0.645827,False,False,no,
+QVLGQWSLP,fiber_no_ap,run_1,1.699732,0.621654,False,False,no,
+QVLGQWSLP,fiber_no_ap,run_2,1.70641,0.564604,False,False,no,
+QVLGQWSLP,fiber_no_ap,run_3,1.748374,0.575207,False,False,no,
+KTKEWHHE,fiber_no_ap,run_1,2.230609,0.381237,True,False,yes,"intertwined fibers"
+KTKEWHHE,fiber_no_ap,run_2,2.207889,0.41051,True,False,no,"irregular disconnected fibers"
+KTKEWHHE,fiber_no_ap,run_3,2.239674,0.482719,True,False,yes,"fiber"
+KVLGDNPW,fiber_no_ap,run_1,1.754801,0.4832,False,False,no,
+KVLGDNPW,fiber_no_ap,run_2,1.789994,0.435585,False,False,no,
+KVLGDNPW,fiber_no_ap,run_3,1.727505,0.367911,False,False,no,
+ERIRED,sphere_no_ap,run_1,1.111235,0.769607,False,False,no,
+ERIRED,sphere_no_ap,run_2,1.110042,0.834335,False,False,no,
+ERIRED,sphere_no_ap,run_3,1.101813,0.74195,False,False,no,
+VCDVI,sphere_no_ap,run_1,1.060793,0.837241,False,False,no,
+VCDVI,sphere_no_ap,run_2,1.060156,0.818458,False,False,no,
+VCDVI,sphere_no_ap,run_3,1.060805,0.750699,False,False,no,
+CEESFR,sphere_no_ap,run_1,1.082543,0.796793,False,False,no,
+CEESFR,sphere_no_ap,run_2,1.109137,0.862311,False,False,no,
+CEESFR,sphere_no_ap,run_3,1.121459,0.841003,False,False,no,
+VEMASH,sphere_no_ap,run_1,1.099808,0.764567,False,False,no,
+VEMASH,sphere_no_ap,run_2,1.104019,0.838826,False,False,no,
+VEMASH,sphere_no_ap,run_3,1.091901,0.875035,False,False,no,
+LFRQEE,sphere_no_ap,run_1,1.301173,0.560419,False,False,no,
+LFRQEE,sphere_no_ap,run_2,1.315116,0.397251,False,False,no,
+LFRQEE,sphere_no_ap,run_3,1.297791,0.400421,False,False,no,
+REMNSFE,sphere_no_ap,run_1,1.663098,0.405145,False,False,no,
+REMNSFE,sphere_no_ap,run_2,1.689982,0.401267,False,False,no,
+REMNSFE,sphere_no_ap,run_3,1.683557,0.505094,False,False,no,
+VEFAV,sphere_no_ap,run_1,1.400901,0.339183,False,False,no,
+VEFAV,sphere_no_ap,run_2,1.45907,0.384974,False,False,no,
+VEFAV,sphere_no_ap,run_3,1.448993,0.557357,False,False,no,
+MIVDCVL,sphere_no_ap,run_1,1.147927,0.714003,False,False,no,
+MIVDCVL,sphere_no_ap,run_2,1.154908,0.650571,False,False,no,
+MIVDCVL,sphere_no_ap,run_3,1.139247,0.81887,False,False,no,
+PLVEILG,sphere_no_ap,run_1,1.081546,0.869096,False,False,no,
+PLVEILG,sphere_no_ap,run_2,1.071401,0.842973,False,False,no,
+PLVEILG,sphere_no_ap,run_3,1.076012,0.803715,False,False,no,
+ERWDK,sphere_no_ap,run_1,1.605017,0.544904,False,False,no,
+ERWDK,sphere_no_ap,run_2,1.630107,0.629497,False,False,no,
+ERWDK,sphere_no_ap,run_3,1.616022,0.557292,False,False,no,
+QWHECK,sphere_no_ap,run_1,2.00596,0.301812,True,False,no,
+QWHECK,sphere_no_ap,run_2,2.00486,0.480153,True,False,no,
+QWHECK,sphere_no_ap,run_3,1.961821,0.426831,True,False,no,
+IRDYKE,sphere_no_ap,run_1,1.304871,0.498503,False,False,no,
+IRDYKE,sphere_no_ap,run_2,1.291107,0.432233,False,False,no,
+IRDYKE,sphere_no_ap,run_3,1.311227,0.392061,False,False,no,
+FAETV,sphere_no_ap,run_1,1.262993,0.387013,False,False,no,
+FAETV,sphere_no_ap,run_2,1.233812,0.540467,False,False,no,
+FAETV,sphere_no_ap,run_3,1.30154,0.608949,False,False,no,
+VMAIVIE,sphere_no_ap,run_1,1.369685,0.616512,False,False,no,
+VMAIVIE,sphere_no_ap,run_2,1.374863,0.434752,False,False,no,
+VMAIVIE,sphere_no_ap,run_3,1.369068,0.304861,False,False,no,
+RKEPIE,sphere_no_ap,run_1,1.249139,0.514009,False,False,no,
+RKEPIE,sphere_no_ap,run_2,1.246464,0.470751,False,False,no,
+RKEPIE,sphere_no_ap,run_3,1.236277,0.405398,False,False,no,
+PNVVYQVWYT,fiber_no_desc,run_1,2.549334,0.334895,True,True,yes,"fiber"
+PNVVYQVWYT,fiber_no_desc,run_2,2.479385,0.481616,True,False,yes,"fiber"
+PNVVYQVWYT,fiber_no_desc,run_3,2.49031,0.348029,True,True,yes,"fiber"
+IFCLIRSYLM,fiber_no_desc,run_1,1.965083,0.31552,True,True,yes,"fiber"
+IFCLIRSYLM,fiber_no_desc,run_2,1.956072,0.507449,True,False,yes,"fiber"
+IFCLIRSYLM,fiber_no_desc,run_3,1.909079,0.505526,True,False,yes,"fiber"
+RLSHNAMLY,fiber_no_desc,run_1,1.69704,0.336337,False,False,no,
+RLSHNAMLY,fiber_no_desc,run_2,1.705475,0.344167,False,False,no,
+RLSHNAMLY,fiber_no_desc,run_3,1.766166,0.316883,False,False,no,
+WEFTGVNFT,fiber_no_desc,run_1,2.230452,0.648432,True,False,no,
+WEFTGVNFT,fiber_no_desc,run_2,2.189599,0.510069,True,False,no,
+WEFTGVNFT,fiber_no_desc,run_3,2.206922,0.459263,True,False,no,
+LEYGFYCV,fiber_no_desc,run_1,2.174837,0.637675,True,False,no,"spherical with fiber-like parts"
+LEYGFYCV,fiber_no_desc,run_2,2.159206,0.338623,True,True,yes,"fiber"
+LEYGFYCV,fiber_no_desc,run_3,2.178313,0.413958,True,False,yes,"fiber"
+FVHIVNDQVV,fiber_no_desc,run_1,1.549136,0.543369,False,False,no,
+FVHIVNDQVV,fiber_no_desc,run_2,1.579023,0.419433,False,False,no,
+FVHIVNDQVV,fiber_no_desc,run_3,1.525001,0.600905,False,False,no,
+PPFAQPMW,fiber_no_desc,run_1,2.786253,0.807107,True,False,no,"spherical"
+PPFAQPMW,fiber_no_desc,run_2,2.803076,0.75099,True,False,no,"spherical"
+PPFAQPMW,fiber_no_desc,run_3,2.842316,0.856201,True,False,no,"spherical"
+LFLIACTPY,fiber_no_desc,run_1,2.479741,0.794354,True,False,no,"spherical"
+LFLIACTPY,fiber_no_desc,run_2,2.529435,0.257273,True,True,yes,"fiber"
+LFLIACTPY,fiber_no_desc,run_3,2.501179,0.521813,True,False,no,"spherical"
+WRWSDGCIL,fiber_no_desc,run_1,2.27381,0.402403,True,False,yes,"fiber"
+WRWSDGCIL,fiber_no_desc,run_2,2.232991,0.495107,True,False,yes,"wide fiber"
+WRWSDGCIL,fiber_no_desc,run_3,2.260033,0.406542,True,False,no,"disconnected fiber"
+VFESFTPY,fiber_no_desc,run_1,2.227484,0.252264,True,True,yes,"fiber"
+VFESFTPY,fiber_no_desc,run_2,2.266419,0.332213,True,True,yes,"fiber"
+VFESFTPY,fiber_no_desc,run_3,2.168933,0.262582,True,True,yes,"fiber"
+TLAGIRWVTE,fiber_no_desc,run_1,2.097157,0.305981,True,True,no,"net-like aggregate"
+TLAGIRWVTE,fiber_no_desc,run_2,2.023248,0.498788,True,False,no,"net-like aggregate"
+TLAGIRWVTE,fiber_no_desc,run_3,2.053629,0.501935,True,False,yes,"fiber"
+PFVCLIVF,fiber_no_desc,run_1,2.748812,0.829716,True,False,no,"spherical"
+PFVCLIVF,fiber_no_desc,run_2,2.777021,0.702942,True,False,no,"spherical"
+PFVCLIVF,fiber_no_desc,run_3,2.78711,0.884671,True,False,no,"spherical"
+FIRSESFL,fiber_no_desc,run_1,1.975259,0.304544,True,True,yes,"fiber"
+FIRSESFL,fiber_no_desc,run_2,1.986728,0.285837,True,True,yes,"fiber"
+FIRSESFL,fiber_no_desc,run_3,1.921694,0.464986,True,False,yes,"fiber"
+PVFVIVVFP,fiber_no_desc,run_1,2.745925,0.711534,True,False,no,"spherical"
+PVFVIVVFP,fiber_no_desc,run_2,2.7654,0.844614,True,False,no,"spherical"
+PVFVIVVFP,fiber_no_desc,run_3,2.787452,0.842039,True,False,no,"spherical"
+FPVSYAIY,fiber_no_desc,run_1,2.888661,0.757536,True,False,no,"spherical"
+FPVSYAIY,fiber_no_desc,run_2,2.901672,0.730996,True,False,no,"spherical"
+FPVSYAIY,fiber_no_desc,run_3,3.002005,0.782336,True,False,no,"spherical"
+VIFDF,sphere_no_desc,run_1,1.843829,0.67212,True,False,no,"branched aggregate"
+VIFDF,sphere_no_desc,run_2,1.832599,0.467025,True,False,no,"branched aggregate"
+VIFDF,sphere_no_desc,run_3,1.827713,0.445827,True,False,no,"curved fiber"
+WWVWE,sphere_no_desc,run_1,2.783618,0.366098,True,False,no,"intertwined fiber"
+WWVWE,sphere_no_desc,run_2,2.745732,0.303254,True,False,no,"fiber"
+WWVWE,sphere_no_desc,run_3,2.779959,0.468748,True,False,no,"fiber-like"
+WFFWFW,sphere_no_desc,run_1,3.925246,0.238996,True,False,no,"fiber"
+WFFWFW,sphere_no_desc,run_2,3.99472,0.868053,True,True,yes,"spherical"
+WFFWFW,sphere_no_desc,run_3,3.990504,0.816837,True,True,yes,"spherical"
+CFMVAVF,sphere_no_desc,run_1,2.936173,0.871235,True,True,yes,"spherical"
+CFMVAVF,sphere_no_desc,run_2,3.008888,0.891779,True,True,yes,"spherical"
+CFMVAVF,sphere_no_desc,run_3,3.01116,0.873051,True,True,yes,"spherical"
+WAVFGVD,sphere_no_desc,run_1,2.519295,0.229995,True,False,no,"fiber"
+WAVFGVD,sphere_no_desc,run_2,2.410806,0.403566,True,False,no,"fiber"
+WAVFGVD,sphere_no_desc,run_3,2.538959,0.535087,True,False,no,"elongated aggregate"
+FYFIL,sphere_no_desc,run_1,2.825264,0.879624,True,True,yes,"spherical"
+FYFIL,sphere_no_desc,run_2,2.858767,0.89139,True,True,yes,"spherical"
+FYFIL,sphere_no_desc,run_3,2.767132,0.867955,True,True,yes,"spherical"
+WAIEF,sphere_no_desc,run_1,2.253919,0.558499,True,False,no,"fiber-like"
+WAIEF,sphere_no_desc,run_2,2.231646,0.649876,True,False,no,"curved fiber"
+WAIEF,sphere_no_desc,run_3,2.240988,0.441659,True,False,no,"branched aggregate"
+LFLCLYV,sphere_no_desc,run_1,2.570867,0.25875,True,False,no,"fiber"
+LFLCLYV,sphere_no_desc,run_2,2.647046,0.855066,True,True,yes,"spherical"
+LFLCLYV,sphere_no_desc,run_3,2.674822,0.93225,True,True,yes,"spherical"
+CHGLICA,sphere_no_desc,run_1,1.138605,0.860634,False,False,no,
+CHGLICA,sphere_no_desc,run_2,1.161199,0.799507,False,False,no,
+CHGLICA,sphere_no_desc,run_3,1.126924,0.848756,False,False,no,
+LFVILP,sphere_no_desc,run_1,2.083819,0.872758,True,True,yes,"spherical"
+LFVILP,sphere_no_desc,run_2,1.991678,0.547257,True,False,yes,"spherical"
+LFVILP,sphere_no_desc,run_3,2.034672,0.712976,True,False,yes,"spherical"
+FACWV,sphere_no_desc,run_1,3.472778,0.879836,True,True,yes,"spherical"
+FACWV,sphere_no_desc,run_2,3.430446,0.854676,True,True,yes,"spherical"
+FACWV,sphere_no_desc,run_3,1.77292,0.239386,False,False,no,"multiple small aggregates"
+CMLWM,sphere_no_desc,run_1,2.52211,0.741998,True,False,yes,"spherical"
+CMLWM,sphere_no_desc,run_2,2.553792,0.648471,True,False,yes,"spherical"
+CMLWM,sphere_no_desc,run_3,1.496005,0.147522,False,False,no,"multiple small aggregates"
+VLWYIWI,sphere_no_desc,run_1,3.136479,0.214046,True,False,no,"fiber"
+VLWYIWI,sphere_no_desc,run_2,3.153736,0.233924,True,False,no,"fiber"
+VLWYIWI,sphere_no_desc,run_3,3.151819,0.49548,True,False,no,"elongated aggregate"
+WMAHA,sphere_no_desc,run_1,2.868542,0.849396,True,True,yes,"spherical"
+WMAHA,sphere_no_desc,run_2,2.959944,0.821562,True,True,yes,"spherical"
+WMAHA,sphere_no_desc,run_3,3.058611,0.899031,True,True,yes,"spherical"
+LVIEFF,sphere_no_desc,run_1,1.79851,0.232692,False,False,no,
+LVIEFF,sphere_no_desc,run_2,1.799834,0.32675,False,False,no,
+LVIEFF,sphere_no_desc,run_3,1.761015,0.461779,False,False,no,
+MEIDC,random,run_1,1.044081,0.761112,False,False,no,
+MEIDC,random,run_2,1.048177,0.730371,False,False,no,
+MEIDC,random,run_3,1.046261,0.798412,False,False,no,
+NGCAN,random,run_1,1.051729,0.474494,False,False,no,
+NGCAN,random,run_2,1.053886,0.454973,False,False,no,
+NGCAN,random,run_3,1.052024,0.761622,False,False,no,
+NTLSRR,random,run_1,1.084671,0.808411,False,False,no,
+NTLSRR,random,run_2,1.074054,0.79555,False,False,no,
+NTLSRR,random,run_3,1.083689,0.810926,False,False,no,
+WNYDFW,random,run_1,2.711947,0.430901,True,False,no,"curved aggregate"
+WNYDFW,random,run_2,2.635566,0.426891,True,False,no,"curved aggregate"
+WNYDFW,random,run_3,2.754094,0.623609,True,False,fiber,"curved fiber"
+HKHVEQV,random,run_1,1.452614,0.445144,False,False,no,
+HKHVEQV,random,run_2,1.480721,0.351825,False,False,no,
+HKHVEQV,random,run_3,1.473956,0.361103,False,False,no,
+KCYRHNI,random,run_1,1.287652,0.469547,False,False,no,
+KCYRHNI,random,run_2,1.315474,0.543912,False,False,no,
+KCYRHNI,random,run_3,1.292417,0.458508,False,False,no,
+RDQTEVIE,random,run_1,1.208843,0.571131,False,False,no,
+RDQTEVIE,random,run_2,1.194426,0.651811,False,False,no,
+RDQTEVIE,random,run_3,1.19156,0.716661,False,False,no,
+CGLEVNCL,random,run_1,1.121048,0.747024,False,False,no,
+CGLEVNCL,random,run_2,1.103234,0.855199,False,False,no,
+CGLEVNCL,random,run_3,1.071115,0.93377,False,False,no,
+EQSRIQISP,random,run_1,1.153397,0.798476,False,False,no,
+EQSRIQISP,random,run_2,1.144588,0.788681,False,False,no,
+EQSRIQISP,random,run_3,1.11234,0.908761,False,False,no,
+VRPKRPAHK,random,run_1,1.064436,0.917691,False,False,no,
+VRPKRPAHK,random,run_2,1.06606,0.923477,False,False,no,
+VRPKRPAHK,random,run_3,1.069479,0.876868,False,False,no,
+ANIMWTIDDA,random,run_1,1.850624,0.565503,True,False,no,"amorphous"
+ANIMWTIDDA,random,run_2,1.92205,0.523668,True,False,no,"amorphous"
+ANIMWTIDDA,random,run_3,1.247535,0.870842,False,False,no,
+FLHKHKINCA,random,run_1,1.431722,0.550353,False,False,no,
+FLHKHKINCA,random,run_2,1.443113,0.5527,False,False,no,
+FLHKHKINCA,random,run_3,1.445317,0.564205,False,False,no,
+RMIHWMME,random,run_1,2.44302,0.508961,True,False,no,"porous aggregate"
+RMIHWMME,random,run_2,2.340534,0.342121,True,False,no,"porous aggregate"
+RMIHWMME,random,run_3,2.380835,0.412157,True,False,fiber,"intertwined fibers"
+CNGCANN,random,run_1,1.087174,0.740988,False,False,no,
+CNGCANN,random,run_2,1.078897,0.794519,False,False,no,
+CNGCANN,random,run_3,1.089368,0.884618,False,False,no,
+TLSRR,random,run_1,1.060561,0.831512,False,False,no,
+TLSRR,random,run_2,1.049108,0.898261,False,False,no,
+TLSRR,random,run_3,1.061519,0.637894,False,False,no,
+CIKYEHT,unsupervised,run_1,1.842257,0.631853,True,False,no,"disconnected fiber"
+CIKYEHT,unsupervised,run_2,1.803784,0.484243,True,False,fiber,"fiber"
+CIKYEHT,unsupervised,run_3,1.815589,0.589373,True,False,no,"amorphous aggregate"
+CYVIMIVLRK,unsupervised,run_1,1.262078,0.749498,False,False,no,
+CYVIMIVLRK,unsupervised,run_2,1.301472,0.610846,False,False,no,
+CYVIMIVLRK,unsupervised,run_3,1.306902,0.751667,False,False,no,
+EWKNE,unsupervised,run_1,1.560122,0.685785,False,False,no,
+EWKNE,unsupervised,run_2,1.582324,0.497331,False,False,no,
+EWKNE,unsupervised,run_3,1.576961,0.538913,False,False,no,
+FCIICHDPD,unsupervised,run_1,1.664795,0.351677,False,False,no,
+FCIICHDPD,unsupervised,run_2,1.65891,0.33696,False,False,no,
+FCIICHDPD,unsupervised,run_3,1.661456,0.427777,False,False,no,
+GLPCCNRS,unsupervised,run_1,1.142006,0.725068,False,False,no,
+GLPCCNRS,unsupervised,run_2,1.167073,0.858015,False,False,no,
+GLPCCNRS,unsupervised,run_3,1.15257,0.833596,False,False,no,
+ILFWYP,unsupervised,run_1,3.005708,0.839153,True,False,spherical,"spherical"
+ILFWYP,unsupervised,run_2,3.094945,0.877134,True,False,spherical,"spherical"
+ILFWYP,unsupervised,run_3,3.180402,0.849253,True,False,spherical,"spherical"
+MADRKTWY,unsupervised,run_1,1.893977,0.632692,True,False,fiber,"intertwined fiber"
+MADRKTWY,unsupervised,run_2,1.894847,0.446714,True,False,no,"curved aggregate"
+MADRKTWY,unsupervised,run_3,1.938984,0.332187,True,False,fiber,"irregular fiber"
+MKFYF,unsupervised,run_1,2.104693,0.340139,True,False,fiber,"fiber"
+MKFYF,unsupervised,run_2,2.150798,0.394673,True,False,fiber,"fiber"
+MKFYF,unsupervised,run_3,2.167378,0.287434,True,False,fiber,"fiber"
+PQVPCMGDL,unsupervised,run_1,1.329804,0.377295,False,False,no,
+PQVPCMGDL,unsupervised,run_2,1.354323,0.465066,False,False,no,
+PQVPCMGDL,unsupervised,run_3,1.363567,0.467043,False,False,no,
+WVWLCQG,unsupervised,run_1,2.42671,0.338767,True,False,fiber,"fiber"
+WVWLCQG,unsupervised,run_2,2.394241,0.2639,True,False,fiber,"fiber"
+WVWLCQG,unsupervised,run_3,2.321285,0.50035,True,False,no,"branched aggregate"
+YPDYSM,unsupervised,run_1,2.035946,0.737875,True,False,no,"irregular spherical aggregate"
+YPDYSM,unsupervised,run_2,2.009141,0.211401,True,False,fiber,"fiber"
+YPDYSM,unsupervised,run_3,1.969406,0.309647,True,False,fiber,"fiber"
+YYCDVERMIC,unsupervised,run_1,1.91798,0.307397,True,False,fiber,"fiber"
+YYCDVERMIC,unsupervised,run_2,1.83218,0.507472,True,False,fiber,"intertwined fiber"
+YYCDVERMIC,unsupervised,run_3,1.885899,0.308073,True,False,fiber,"fiber"
+FFIFI,sphere_pepmorph,run_1,2.784343,0.896117,True,True,yes,spherical
+FFIFI,sphere_pepmorph,run_2,2.842389,0.811735,True,True,yes,spherical
+FFIFI,sphere_pepmorph,run_3,2.878914,0.815658,True,True,yes,spherical
+FFLFI,sphere_pepmorph,run_1,2.742129,0.838104,True,True,yes,spherical
+FFLFI,sphere_pepmorph,run_2,2.796964,0.75522,True,True,yes,spherical
+FFLFI,sphere_pepmorph,run_3,2.643248,0.8013,True,True,yes,spherical
+FIFIF,sphere_pepmorph,run_1,2.336651,0.263922,True,False,no,sheet
+FIFIF,sphere_pepmorph,run_2,2.341804,0.265839,True,False,no,sheet
+FIFIF,sphere_pepmorph,run_3,2.555382,0.819299,True,True,yes,spherical
+FIFVF,sphere_pepmorph,run_1,2.32165,0.295891,True,False,no,sheet
+FIFVF,sphere_pepmorph,run_2,2.387796,0.257241,True,False,no,sheet
+FIFVF,sphere_pepmorph,run_3,2.35572,0.444297,True,False,no,circular sheet/disk
+FIVFF,sphere_pepmorph,run_1,3.056836,0.838981,True,True,yes,spherical
+FIVFF,sphere_pepmorph,run_2,3.057395,0.893988,True,True,yes,spherical
+FIVFF,sphere_pepmorph,run_3,3.100753,0.871145,True,True,yes,spherical
+FIVVIF,sphere_pepmorph,run_1,2.628269,0.81735,True,True,yes,spherical
+FIVVIF,sphere_pepmorph,run_2,2.628596,0.911663,True,True,yes,spherical
+FIVVIF,sphere_pepmorph,run_3,2.622588,0.727875,True,False,yes,spherical
+FLIFFI,sphere_pepmorph,run_1,2.602607,0.634634,True,False,yes,spherical
+FLIFFI,sphere_pepmorph,run_2,2.661189,0.853447,True,True,yes,spherical
+FLIFFI,sphere_pepmorph,run_3,2.676094,0.8507,True,True,yes,spherical
+FVIFF,sphere_pepmorph,run_1,3.053138,0.86656,True,True,yes,spherical
+FVIFF,sphere_pepmorph,run_2,3.130336,0.918252,True,True,yes,spherical
+FVIFF,sphere_pepmorph,run_3,2.991832,0.834801,True,True,yes,spherical
+FVIVI,sphere_pepmorph,run_1,2.164393,0.847842,True,True,yes,spherical
+FVIVI,sphere_pepmorph,run_2,2.187212,0.860373,True,True,yes,spherical
+FVIVI,sphere_pepmorph,run_3,2.10853,0.767637,True,True,yes,spherical
+IVFVI,sphere_pepmorph,run_1,2.06341,0.703003,True,False,yes,roughly spherical
+IVFVI,sphere_pepmorph,run_2,2.075192,0.762104,True,True,yes,spherical
+IVFVI,sphere_pepmorph,run_3,2.076836,0.80093,True,True,yes,spherical
+IVLFIF,sphere_pepmorph,run_1,2.407728,0.766112,True,True,yes,spherical
+IVLFIF,sphere_pepmorph,run_2,2.45442,0.81553,True,True,yes,spherical
+IVLFIF,sphere_pepmorph,run_3,2.505383,0.681601,True,False,yes,roughly spherical/vesicle
+LIIVF,sphere_pepmorph,run_1,1.949825,0.730597,True,False,yes,spherical
+LIIVF,sphere_pepmorph,run_2,1.955719,0.753638,True,True,yes,spherical
+LIIVF,sphere_pepmorph,run_3,2.044179,0.860195,True,True,yes,spherical
+LVIIF,sphere_pepmorph,run_1,2.00676,0.80139,True,True,yes,spherical
+LVIIF,sphere_pepmorph,run_2,1.932601,0.555468,True,False,no,"irregular shape, approx spherical?"
+LVIIF,sphere_pepmorph,run_3,2.006979,0.736827,True,False,yes,roughly spherical
+VFFIF,sphere_pepmorph,run_1,2.870044,0.911413,True,True,yes,spherical
+VFFIF,sphere_pepmorph,run_2,2.928571,0.890116,True,True,yes,spherical
+VFFIF,sphere_pepmorph,run_3,2.909062,0.918253,True,True,yes,spherical
+VIFIL,sphere_pepmorph,run_1,1.924503,0.705582,True,False,no,"irregular, approx spherical"
+VIFIL,sphere_pepmorph,run_2,1.991081,0.557639,True,False,no,"irregular, slightly elongated"
+VIFIL,sphere_pepmorph,run_3,1.966068,0.741084,True,False,yes,roughly spherical
+CVSAPGIFHC,fiber_pepmorph,run_1,2.022145,0.295179,True,True,yes,"fiber, elongated"
+CVSAPGIFHC,fiber_pepmorph,run_2,1.947726,0.409692,True,False,yes,"fiber, wide elongated"
+CVSAPGIFHC,fiber_pepmorph,run_3,1.907187,0.425011,True,False,yes,"fiber, slightly narrow center but elongated"
+FTFIPGWVDL,fiber_pepmorph,run_1,2.478425,0.307051,True,True,yes,fiber
+FTFIPGWVDL,fiber_pepmorph,run_2,2.491124,0.390002,True,False,yes,fiber
+FTFIPGWVDL,fiber_pepmorph,run_3,2.348946,0.49893,True,False,yes,"fiber-like, helix structure"
+HYVSGRFLIY,fiber_pepmorph,run_1,2.176169,0.520591,True,False,yes,"fiber, wider"
+HYVSGRFLIY,fiber_pepmorph,run_2,2.18784,0.497972,True,False,no,net-like
+HYVSGRFLIY,fiber_pepmorph,run_3,2.27334,0.469435,True,False,yes,"fiber, wider"
+ILSCPGWPFY,fiber_pepmorph,run_1,2.817635,0.24049,True,True,yes,fiber
+ILSCPGWPFY,fiber_pepmorph,run_2,2.525681,0.845007,True,False,yes,"two fiber, intertwined connected along the box edges"
+ILSCPGWPFY,fiber_pepmorph,run_3,2.80419,0.274513,True,True,yes,fiber
+ILSFPDKVTY,fiber_pepmorph,run_1,2.134727,0.458935,True,False,yes,"two fiber, intertwined connected along the box edges"
+ILSFPDKVTY,fiber_pepmorph,run_2,2.241865,0.442462,True,False,yes,"fiber, wide"
+ILSFPDKVTY,fiber_pepmorph,run_3,2.206807,0.295566,True,True,yes,fiber
+LDIYNHPFF,fiber_pepmorph,run_1,2.585237,0.27819,True,True,yes,fiber
+LDIYNHPFF,fiber_pepmorph,run_2,2.619542,0.279883,True,True,yes,fiber
+LDIYNHPFF,fiber_pepmorph,run_3,2.606587,0.236803,True,True,yes,fiber
+LFLTADSYCF,fiber_pepmorph,run_1,2.504544,0.268675,True,True,yes,fiber
+LFLTADSYCF,fiber_pepmorph,run_2,2.526214,0.270478,True,True,yes,fiber
+LFLTADSYCF,fiber_pepmorph,run_3,2.569697,0.332727,True,True,yes,fiber
+LICWTGHCHH,fiber_pepmorph,run_1,2.183927,0.577594,True,False,yes,"fiber, connected in the middle"
+LICWTGHCHH,fiber_pepmorph,run_2,2.311389,0.423991,True,False,yes,"fiber, wide"
+LICWTGHCHH,fiber_pepmorph,run_3,2.181859,0.525428,True,False,yes,curved fiber
+PAPFPWSIWI,fiber_pepmorph,run_1,3.037179,0.533439,True,False,yes,intertwined fiber
+PAPFPWSIWI,fiber_pepmorph,run_2,3.165233,0.308239,True,True,yes,fiber
+PAPFPWSIWI,fiber_pepmorph,run_3,2.988025,0.524355,True,False,yes,intertwined fiber
+PFAIPYCSTP,fiber_pepmorph,run_1,2.606192,0.29126,True,True,yes,fiber
+PFAIPYCSTP,fiber_pepmorph,run_2,2.622762,0.896545,True,False,no,spherical
+PFAIPYCSTP,fiber_pepmorph,run_3,2.516091,0.621539,True,False,no,"split, toward spherical"
+PVFCADQWFC,fiber_pepmorph,run_1,2.721827,0.35606,True,False,yes,fiber
+PVFCADQWFC,fiber_pepmorph,run_2,2.902227,0.298652,True,True,yes,fiber
+PVFCADQWFC,fiber_pepmorph,run_3,2.91401,0.314689,True,True,yes,fiber
+PVWRADSWHC,fiber_pepmorph,run_1,2.466513,0.507244,True,False,yes,intertwined fiber
+PVWRADSWHC,fiber_pepmorph,run_2,2.386975,0.496283,True,False,yes,"two fiber, not connected"
+PVWRADSWHC,fiber_pepmorph,run_3,2.476534,0.583675,True,False,yes,intertwined fiber
+QIRTYDFLVF,fiber_pepmorph,run_1,2.154567,0.817163,True,False,yes,"two fibers, connected"
+QIRTYDFLVF,fiber_pepmorph,run_2,2.161391,0.530622,True,False,no,porous sheet
+QIRTYDFLVF,fiber_pepmorph,run_3,2.164387,0.714594,True,False,yes,fiber
+RAVYGDFVFL,fiber_pepmorph,run_1,2.176637,0.362986,True,False,yes,fiber intertwined
+RAVYGDFVFL,fiber_pepmorph,run_2,2.196771,0.411811,True,False,no,sheet string-like
+RAVYGDFVFL,fiber_pepmorph,run_3,2.148178,0.354731,True,False,yes,fiber intertwined
+VFLVPVDFKY,fiber_pepmorph,run_1,2.740966,0.351668,True,False,yes,fiber
+VFLVPVDFKY,fiber_pepmorph,run_2,2.801216,0.534394,True,False,no,vesicle
+VFLVPVDFKY,fiber_pepmorph,run_3,2.825777,0.856114,True,False,no,vesicle

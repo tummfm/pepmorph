@@ -1,0 +1,16 @@
+>peptide_1
+VGCYL
+>peptide_2
+FNWFC
+>peptide_3
+WGQCSY
+>peptide_4
+IAHWMA
+>peptide_5
+VFIHRDCATN
+>peptide_6
+FVWRTDKTDD
+>peptide_7
+RCTDCPFA
+>peptide_8
+KYNEYGHA

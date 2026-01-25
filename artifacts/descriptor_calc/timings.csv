@@ -1,0 +1,5 @@
+timestamp,step,directory,elapsed_seconds,exit_code,local_log
+2026-01-15 14:34:34,gen_spheres,spheres,9068,0,spheres/log.txt
+2026-01-15 19:57:44,gen_fibers,fibers,19390,0,fibers/log.txt
+2026-01-15 20:02:32,dataset_spheres,spheres/pepfold_pipeline,288,0,spheres/pepfold_pipeline/generate_pep_dataset.log
+2026-01-15 20:07:36,dataset_fibers,fibers/pepfold_pipeline,304,0,fibers/pepfold_pipeline/generate_pep_dataset.log

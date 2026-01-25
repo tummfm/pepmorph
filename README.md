@@ -1,43 +1,100 @@
 # PepMorph: Morphology-Specific Peptide Discovery via Masked Conditional Generative Modeling
 
+![PepMorph pipeline](artifacts/pepmorph.gif)
+
 This repository implements the **PepMorph** pipeline for the paper *Morphology-Specific Peptide Discovery via Masked Conditional Generative Modeling* - Costa & Zavadlav, (2025). It provides a conditional, mask-aware CVAE for peptide generation and utilities to train, validate, and compare generated sequences against morphology targets.
+
+## Abstract
+
+> Peptide self-assembly prediction offers a powerful bottom-up strategy for designing biocompatible, low-toxicity materials for large-scale synthesis in a broad range of biomedical and energy applications. However, screening the vast sequence space for categorization of aggregate morphology remains intractable. We introduce PepMorph, an end-to-end peptide discovery pipeline that generates novel sequences that are not only prone to aggregate but whose self-assembly is steered toward fibrillar or spherical morphologies by conditioning on isolated peptide descriptors that serve as morphology proxies. To this end, we compiled a new dataset by leveraging existing aggregation propensity datasets and extracting geometric and physicochemical descriptors. This dataset is then used to train a Transformer-based Conditional Variational Autoencoder with a masking mechanism, which generates novel peptides under arbitrary conditioning. After filtering to ensure design specifications and validation of generated sequences through coarse-grained molecular dynamics simulations, PepMorph yielded 83% success rate under our CG-MD validation protocol and morphology criterion for the targeted class, showcasing its promise as a framework for application-driven peptide discovery.
 
 ---
 
 ## Repository structure
 
 ```
-├── dataset/
-│   ├── figs/                           # resulting visualizations
-│   ├── *.ipynb                          # notebooks for data evaluation
-│   ├── merged_all_no_norm.csv          # merged dataset of peptide sequences and descriptors (unnormalized)
-│   └── merged_all.csv                  # merged dataset of peptide sequences and descriptors
-├── descriptor_calc/
-│   ├── pepfold_pipeline/                  # example files for MD setup
-│   │   ├── generate_pep_dataset.py     # generate dataset of descriptors from pdb structures
-│   │   └── test_sequences/               # generated descriptor validation
-│   ├── gen.py                    # generate 3D structures of peptides in peptides.fst
-│   └── peptides.fst              # list of peptides to generate conformations for
-├── md_sims/
-│   ├── example/                  # example files for MD setup
-│   └── script_*.csv              # scripts for MD simulation
-├── modeling/
-│   ├── ap_model/
-│   │   ├── datasets/             # dataloader
-│   │   ├── models/               # model architecture
-│   │   └── ap_sa_pred.ipynb      # notebook to train and validate the AP classifier and regressor
-│   ├── masked_cvae  
-│   │   ├── datasets/             # dataloader
-│   │   ├── models/               # model architecture
-│   │   ├── train.py              # training script for the masked CVAE model
-│   │   └── utils.py              # utilities script
-│   └── validation/
-│       ├── figs/                # resulting plots
-│       ├── gen_peptides/        # generated peptides in screening for morphology
-│       ├── results/             # validation metrics results
-│       └── *.ipynb              # notebooks for model validation
+├── data/
+│   ├── raw/                      # source datasets + input FASTA (peptides.fst)
+│   ├── processed/                # merged/normalized descriptor CSVs
+│   └── splits/                   # deterministic train/val/test indices
+├── artifacts/
+│   ├── data_figs/                # dataset figures
+│   ├── descriptor_calc/          # descriptor-calc logs/timings
+│   ├── models/                   # pretrained weights (AP predictor, masked CVAE)
+│   ├── validation/               # validation outputs (figs/results/gen_peptides)
+│   ├── md_sims/                  # validation artifacts from the paper (MD sims, analysis)
+│   └── legacy_runs/              # older outputs moved out of working dirs
+├── notebooks/
+│   └── *.ipynb                   # exploratory notebooks
+├── src/
+│   ├── shared/
+│   │   └── plot_style.py     # shared plotting style
+│   ├── scripts/              # dataset merge/analysis utilities
+│   ├── descriptor_calc/      # PEP-FOLD/descriptor generation pipeline
+│   ├── modeling/             # AP predictor + CVAE training/validation
+│   └── md_sims/              # CG robustness analysis scripts
 ├── README.md
+├── environment.yml               # pinned Python dependencies
 ```
+
+---
+
+## Quickstart
+
+1) Create the environment:
+```bash
+conda env create -f environment.yml
+conda activate pepmorph
+```
+If you need CPU-only, remove `pytorch-cuda` from `environment.yml` and reinstall.
+
+2) Prepare the processed dataset:
+```bash
+python src/scripts/merge.py
+```
+
+3) Create deterministic splits (stratified by length, seed=42):
+```bash
+python src/scripts/make_splits.py
+```
+
+4) Train the AP/SA predictor:
+```bash
+python src/modeling/ap_model/ap_sa_pred.py --config src/modeling/ap_model/config.yaml
+```
+
+5) Train the masked CVAE (all hyperparameters in config):
+```bash
+python src/modeling/masked_cvae/train.py --config src/modeling/masked_cvae/config.yaml
+```
+
+6) Generate peptides and evaluate:
+```bash
+python src/modeling/validation/generate.py --mode all
+python src/modeling/validation/evaluate_novelty_diversity_sim.py
+python src/modeling/validation/validation_plotting.py
+```
+
+Outputs go to `artifacts/validation/{gen_peptides,results,figs}`.
+
+---
+
+## Reproducibility notes
+
+- **Environment**: `environment.yml` pins all major dependencies (Torch, ESM, numpy/pandas/sklearn, plotting).
+- **Splits**: `data/splits/*.txt` are deterministic (seed=42), generated by `src/scripts/make_splits.py`.
+- **Seeds**: training/evaluation scripts accept `--seed` and call a shared deterministic seed routine.
+- **Training schedule**: CVAE hyperparameters are in `src/modeling/masked_cvae/config.yaml` and logged to `artifacts/models/masked_cvae/config_used.yaml` on each run.
+- **AP model config**: AP hyperparameters are in `src/modeling/ap_model/config.yaml` and logged to `artifacts/models/ap_model/config_used.yaml` on each run.
+- **Checkpoints**: pretrained weights live in `artifacts/models/{ap_model,masked_cvae}`.
+
+Key CVAE settings (paper defaults):
+- Latent dimension: 24
+- Encoder/decoder: 2-layer Transformer, hidden size 256, 8 heads, dropout 0.1
+- KL schedule: cyclic weight (base 0.05) with 10 cycles and 100 warmup epochs
+- Mask probability: 0.5 (stochastic descriptor masking)
+- Random peptide augmentation: 15,000 per epoch
+- Batch size: 2048, epochs: 250, learning rate: 1e-3, weight decay: 1e-4
 
 ---
 
