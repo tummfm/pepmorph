@@ -307,11 +307,12 @@ def plot_error_box_by_k(error_df: pd.DataFrame, title: str, outpath: str):
 
 
 def parse_args() -> argparse.Namespace:
+    default_results = RESULTS_DIR / "cvae_evaluation_results_with_matches.pkl"
     parser = argparse.ArgumentParser(description="Summarize conditional matching and plot diagnostics.")
     parser.add_argument(
         "--results-pkl",
         type=str,
-        default=str(RESULTS_DIR / "cvae_evaluation_results.pkl"),
+        default=str(default_results),
     )
     parser.add_argument(
         "--data-csv",
@@ -331,7 +332,16 @@ def main() -> int:
 
     set_paper_style()
 
-    samples_df, within_df, _ = load_results_pickle(args.results_pkl)
+    results_path = Path(args.results_pkl).expanduser().resolve()
+    if not results_path.exists():
+        fallback = (RESULTS_DIR / "cvae_evaluation_results.pkl").resolve()
+        if fallback.exists():
+            print(f"Results not found at {results_path}. Falling back to {fallback}.")
+            results_path = fallback
+        else:
+            raise FileNotFoundError(f"Missing results file: {results_path}")
+
+    samples_df, within_df, _ = load_results_pickle(str(results_path))
     cond_summary = build_condition_summary(samples_df, include_length_in_k=True)
     if within_df is not None:
         cond_summary = cond_summary.merge(
@@ -364,6 +374,10 @@ def main() -> int:
             str(output_dir / "fig_ap_error_by_k.svg"),
         ),
     }
+    if "pred_ap" not in samples_df.columns:
+        print("Missing pred_ap in results. Run condition_matching_report --save-updated-pkl to enable AP plots.")
+        plot_map.pop("ap_marginal")
+        plot_map.pop("ap_error")
 
     selected = args.plots or list(plot_map.keys())
     for name in selected:

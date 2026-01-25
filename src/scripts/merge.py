@@ -35,7 +35,6 @@ def load_raw_tables() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.Data
         metrics_path = (
             DATA_RAW.parent.parent
             / "src"
-            / "pepmorph"
             / "descriptor_calc"
             / "pepfold_pipeline"
             / "peptide_metrics.csv"

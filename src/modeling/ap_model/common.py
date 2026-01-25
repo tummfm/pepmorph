@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 AP_MODEL_DIR = Path(__file__).resolve().parent
-REPO_ROOT = AP_MODEL_DIR.parents[3]
+REPO_ROOT = AP_MODEL_DIR.parents[2]
 MODEL_DIR = AP_MODEL_DIR.parent
 SRC_DIR = REPO_ROOT / "src"
 

@@ -470,18 +470,29 @@ def plot_condition_scatter(samples_df: pd.DataFrame, novelty_df: pd.DataFrame | 
 
 
 def plot_ap_vs_predap(gen_dir: Path, output_dir: Path) -> None:
-    df = pd.read_csv(gen_dir / "rmoi_and_ap_by_run.csv")
+    rmoi_path = gen_dir / "rmoi_and_ap_by_run.csv"
+    if not rmoi_path.exists():
+        print(f"Skipping ap_vs_predap: missing {rmoi_path}")
+        return
+
+    df = pd.read_csv(rmoi_path)
     df = df.loc[:, ~df.columns.str.contains("^Unnamed")]
 
     min_ap, max_ap = 0.959986, 2.89703
 
+    fiber_path = gen_dir / "filtered_ap_peptides_fiber_final.txt"
+    sphere_path = gen_dir / "filtered_ap_peptides_spheres.txt"
+    if not (fiber_path.exists() and sphere_path.exists()):
+        print("Skipping ap_vs_predap: missing filtered peptide files.")
+        return
+
     filtered_fibers = pd.read_csv(
-        gen_dir / "filtered_ap_peptides_fiber_final.txt",
+        fiber_path,
         header=None,
         names=["peptide", "peptide_3", "pred_ap", "pred_clas"],
     )
     filtered_spheres = pd.read_csv(
-        gen_dir / "filtered_ap_peptides_spheres.txt",
+        sphere_path,
         header=None,
         names=["peptide", "peptide_3", "pred_ap", "pred_clas"],
     )
@@ -493,12 +504,18 @@ def plot_ap_vs_predap(gen_dir: Path, output_dir: Path) -> None:
     filtered_spheres["pred_ap"] = unnormalize_ap(filtered_spheres["pred_ap"])
 
     combined_df = pd.concat([filtered_fibers, filtered_spheres], ignore_index=True)
+    if combined_df.empty:
+        print("Skipping ap_vs_predap: no filtered peptides available.")
+        return
     df = df.merge(combined_df[["peptide", "pred_ap", "pred_clas"]], on="peptide", how="left")
 
     point = TEAL[4]
     line = TEAL[2]
 
     d = df[["aggregation_propensity", "pred_ap"]].dropna()
+    if d.empty:
+        print("Skipping ap_vs_predap: no overlapping AP data available.")
+        return
     x = d["aggregation_propensity"].to_numpy(dtype=float)
     y = d["pred_ap"].to_numpy(dtype=float)
 

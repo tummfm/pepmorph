@@ -236,14 +236,15 @@ def main() -> int:
         print(f"Using {torch.cuda.device_count()} GPUs")
         model = nn.DataParallel(model)
     model.to(device)
-    model.freeze_encoder()
+    model_core = model.module if hasattr(model, "module") else model
+    model_core.freeze_encoder()
 
     optimizer = torch.optim.AdamW(
         [
             {
-                "params": list(model.shared.parameters())
-                + list(model.ap_head.parameters())
-                + list(model.cls_head.parameters()),
+                "params": list(model_core.shared.parameters())
+                + list(model_core.ap_head.parameters())
+                + list(model_core.cls_head.parameters()),
                 "lr": lr,
             }
         ]
@@ -300,7 +301,8 @@ def main() -> int:
         "splits_dir": str(splits_dir),
     }
     config_out.write_text(yaml.safe_dump(config_payload, sort_keys=False))
-    torch.save(model.state_dict(), save_path)
+    model_to_save = model.module if hasattr(model, "module") else model
+    torch.save(model_to_save.state_dict(), save_path)
     print("Saved", save_path)
 
     _ = val_cls_loader, test_cls_loader, val_reg_loader, test_reg_loader

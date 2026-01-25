@@ -545,36 +545,44 @@ def main() -> int:
         results = pickle.load(f)
 
     samples_df = results["samples_df"]
+    match_cols = {f"match_{feat}" for feat in FEATURES}
+    has_matches = match_cols.issubset(samples_df.columns)
 
-    metrics_df = pd.read_csv(args.metrics_csv)
+    if not has_matches:
+        metrics_df = pd.read_csv(args.metrics_csv)
 
-    min_max = {
-        "hydrophobic_moment": (0.000000, 1.998000),
-        "net_charge": (-6.000000, 6.000000),
-    }
+        min_max = {
+            "hydrophobic_moment": (0.000000, 1.998000),
+            "net_charge": (-6.000000, 6.000000),
+        }
 
-    for col, (mn, mx) in min_max.items():
-        if col not in metrics_df.columns:
-            raise ValueError(f"metrics CSV must contain '{col}'.")
-        rng = mx - mn
-        metrics_df[col] = (metrics_df[col] - mn) / rng
+        for col, (mn, mx) in min_max.items():
+            if col not in metrics_df.columns:
+                raise ValueError(f"metrics CSV must contain '{col}'.")
+            rng = mx - mn
+            metrics_df[col] = (metrics_df[col] - mn) / rng
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    predictor = PeptidePredictor(deepcopy(esm_model_pretrained), alphabet=ALPHABET)
-    state = torch.load(Path(args.checkpoint).expanduser(), map_location=device, weights_only=True)
-    predictor.load_state_dict(state)
-    predictor.to(device).eval()
+        checkpoint = Path(args.checkpoint).expanduser()
+        if not checkpoint.exists():
+            raise FileNotFoundError(f"Missing AP checkpoint: {checkpoint}")
+        predictor = PeptidePredictor(deepcopy(esm_model_pretrained), alphabet=ALPHABET)
+        state = torch.load(checkpoint, map_location=device, weights_only=True)
+        predictor.load_state_dict(state)
+        predictor.to(device).eval()
 
-    samples_df = add_condition_matches_from_params(
-        samples_df=samples_df,
-        morph_df=metrics_df,
-        model=predictor,
-        device=device,
-        sa_threshold=args.sa_threshold,
-        beta_fraction_threshold=args.beta_threshold,
-        tol_pct=args.tol_pct,
-    )
+        samples_df = add_condition_matches_from_params(
+            samples_df=samples_df,
+            morph_df=metrics_df,
+            model=predictor,
+            device=device,
+            sa_threshold=args.sa_threshold,
+            beta_fraction_threshold=args.beta_threshold,
+            tol_pct=args.tol_pct,
+        )
+    else:
+        print("Using existing match columns from results; skipping AP/SA prediction.")
 
     summary = compute_condition_matching_effectiveness(samples_df)
     summary.to_csv(output_dir / "condition_matching_summary.csv", index=False)
