@@ -1,0 +1,12 @@
+metric,mean [95% CI]
+All-target success rate,"20.7 [14.1, 27.6]"
+Within-cond uniqueness (%),"100.0 [100.0, 100.0]"
+Within-cond mean NED,"0.912 [0.908, 0.917]"
+Within-cond mean NW %id,"9.3 [8.9, 9.7]"
+Gen-vs-train mean NW %id,"9.6 [9.5, 9.7]"
+Match rate: length,"99.8 [99.5, 100.0]"
+Match rate: is_assembled,"82.5 [79.0, 85.9]"
+Match rate: ap,"80.3 [77.0, 83.5]"
+Match rate: has_beta_sheet_content,"97.9 [94.5, 100.0]"
+Match rate: hydrophobic_moment,"nan [nan, nan]"
+Match rate: net_charge,"nan [nan, nan]"
