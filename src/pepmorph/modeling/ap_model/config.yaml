@@ -1,0 +1,13 @@
+# Default AP/SA predictor configuration
+seed: 42
+data_csv: data/processed/merged_all.csv
+splits_dir: data/splits
+save_path: artifacts/models/ap_model/peptide_predictor.pt
+
+max_seq_length: 12
+hidden_dim: 128
+dropout: 0.1
+
+batch_size: 1024
+epochs: 5
+lr: 0.001
