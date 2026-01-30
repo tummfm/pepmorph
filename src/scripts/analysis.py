@@ -164,7 +164,7 @@ def plot_aa_distribution(data: pd.DataFrame, no_ap: pd.DataFrame, output_path: O
         edgecolor=TEAL[4],
         linewidth=1.2,
         alpha=0.95,
-        label="PEP-FOLD only",
+        label="Random Sequences",
         color=TEAL[1],
     )
     ax.bar(
@@ -174,7 +174,7 @@ def plot_aa_distribution(data: pd.DataFrame, no_ap: pd.DataFrame, output_path: O
         edgecolor=TEAL[4],
         linewidth=1.2,
         alpha=0.95,
-        label="PepMorph Dataset \\ PEP-FOLD only",
+        label="PepMorph Dataset \\ Random Sequences",
         color=TEAL[3],
     )
     ax.bar(
