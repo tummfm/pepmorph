@@ -1,8 +1,8 @@
-# PepMorph: Morphology-Specific Peptide Discovery via Masked Conditional Generative Modeling
+# PepMorph: Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling
 
 ![PepMorph pipeline](artifacts/pepmorph.gif)
 
-This repository implements the **PepMorph** pipeline for the paper *Morphology-Specific Peptide Discovery via Masked Conditional Generative Modeling* - Costa & Zavadlav, (2025). It provides a conditional, mask-aware CVAE for peptide generation and utilities to train, validate, and compare generated sequences against morphology targets.
+This repository implements the **PepMorph** pipeline for the paper *Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling* - Costa & Zavadlav, (2025). It provides a conditional, mask-aware CVAE for peptide generation and utilities to train, validate, and compare generated sequences against morphology targets.
 
 ## Abstract
 
