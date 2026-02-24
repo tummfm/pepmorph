@@ -1,0 +1,31 @@
+# This file was created Tue Jan 13 02:01:46 2026
+# Created by:
+#                    :-) GROMACS - gmx sasa, 2024.5-spack (-:
+# 
+# Executable:   /dss/lrzsys/sys/spack/release/sles15.5/24.5.0/opt/sapphirerapids/gromacs/2024.5-oneapi-6q4falh/bin/gmx_mpi
+# Data prefix:  /dss/lrzsys/sys/spack/release/sles15.5/24.5.0/opt/sapphirerapids/gromacs/2024.5-oneapi-6q4falh
+# Working dir:  /dss/dsshome1/07/go46vuw2/pepmorph/run_3/peptides/CHGLICA/prod
+# Command line:
+#   gmx_mpi sasa -f trajout.xtc -s ../box/peptide-cg.gro -o sasa.xvg
+# gmx sasa is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "Solvent Accessible Surface"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Area (nm\S2\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Total"
+      0.000 2707.694
+   1250.000 2332.669
+   2500.000 2299.759
+   3750.000 2268.374
+   5000.000 2303.290
+   6250.000 2247.534
+   7500.000 2225.138
