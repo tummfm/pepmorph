@@ -1,0 +1,9 @@
+{
+  "git_commit": "76779c29fef93764544ff6ee17b0ade4e54c2ddd",
+  "seed": 42,
+  "config_path": "/home/go46vuw/pepmorph/src/modeling/masked_cvae/config.yaml",
+  "model_checkpoint_path": null,
+  "splits_dir": "data/splits",
+  "random_sequences_csv": "/home/go46vuw/pepmorph/data/raw/peptide_metrics_no_ap.csv",
+  "output_dir": "/home/go46vuw/pepmorph/artifacts/data_figs/train_distribution_comparison"
+}

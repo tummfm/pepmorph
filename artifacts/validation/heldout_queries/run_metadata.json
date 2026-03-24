@@ -1,0 +1,39 @@
+{
+  "git_commit": "76779c29fef93764544ff6ee17b0ade4e54c2ddd",
+  "seed": 42,
+  "config_path": "/home/go46vuw/pepmorph/src/modeling/masked_cvae/config.yaml",
+  "checkpoint_path": "/home/go46vuw/pepmorph/artifacts/models/masked_cvae/finetuned_cvae.pt",
+  "model_config": {
+    "latent_dim": 24,
+    "encoder_hidden_dim": 256,
+    "decoder_hidden_dim": 256,
+    "num_encoder_layers": 2,
+    "num_decoder_layers": 2,
+    "nhead": 8,
+    "dropout": 0.1
+  },
+  "device": "cuda",
+  "splits_dir": "/home/go46vuw/pepmorph/data/splits",
+  "source_selection": "complete_case",
+  "max_source_peptides": 0,
+  "n_source_peptides_selected": 3310,
+  "n_unique_source_peptides_used": 3305,
+  "n_queries_exported": 15000,
+  "n_per_query": 1,
+  "max_total_generated": 15000,
+  "n_generated_total": 15000,
+  "temperature": 1.0,
+  "top_p": null,
+  "beam_size": null,
+  "k_min": 1,
+  "k_max": 6,
+  "max_fasta_length": 10,
+  "features": [
+    "length",
+    "is_assembled",
+    "ap",
+    "has_beta_sheet_content",
+    "hydrophobic_moment",
+    "net_charge"
+  ]
+}

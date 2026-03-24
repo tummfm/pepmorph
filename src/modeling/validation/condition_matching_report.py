@@ -438,23 +438,51 @@ def plot_conditions_success(samples_df: pd.DataFrame, output_path: Path) -> None
     full_k = np.arange(1, max_k + 1, dtype=int)
     plot_df = plot_df.set_index("k").reindex(full_k, fill_value=0).reset_index()
 
-    fig, ax = plt.subplots(figsize=(4.8, 3.5))
+    fig, ax = plt.subplots(figsize=(5.4, 4.0))
     x = plot_df["k"].to_numpy()
     succ = plot_df["successes"].to_numpy()
     rem = plot_df["remainder"].to_numpy()
 
-    ax.bar(x, succ, width=0.7, label="Matching peptides", color=TEAL[4], alpha=0.9, linewidth=0)
-    ax.bar(x, rem, width=0.7, bottom=succ, label="All peptides", color=TEAL[0], alpha=0.9, linewidth=0)
+    ax.bar(
+        x,
+        succ,
+        width=0.7,
+        label="Matching peptides",
+        color=TEAL[5],
+        edgecolor=TEAL[4],
+        linewidth=1.2,
+        alpha=0.95,
+    )
+    ax.bar(
+        x,
+        rem,
+        width=0.7,
+        bottom=succ,
+        label="Remaining peptides",
+        color=TEAL[1],
+        edgecolor=TEAL[4],
+        linewidth=1.2,
+        alpha=0.95,
+    )
 
     for spine in ("top", "right"):
         ax.spines[spine].set_visible(False)
 
     ax.set_xticks(full_k)
     ax.set_xlim(full_k.min() - 0.6, full_k.max() + 0.6)
+    ax.set_xlabel("# of conditioned descriptors $k$")
+    ax.set_ylabel("Count")
 
-    ax.legend(loc="upper right", frameon=True, fancybox=True, framealpha=0.9, fontsize=10)
+    ax.legend(
+        loc="upper right",
+        bbox_to_anchor=(0.98, 0.98),
+        frameon=True,
+        fancybox=True,
+        framealpha=0.9,
+        fontsize=11,
+    )
     plt.tight_layout()
-    fig.savefig(output_path, format="svg", bbox_inches="tight", dpi=300)
+    fig.savefig(output_path, format=output_path.suffix.lstrip("."), bbox_inches="tight", dpi=300)
     plt.close(fig)
 
 
@@ -515,7 +543,15 @@ def plot_samples_per_hit(samples_df: pd.DataFrame, output_path: Path) -> None:
     x = plot_df["k"].to_numpy()
     y = plot_df["E_1hit"].to_numpy()
 
-    ax.plot(x, y, marker="o", color=TEAL[4], linewidth=2.2, markersize=6, label=r"Expected samples per hit (1/p_k)")
+    ax.plot(
+        x,
+        y,
+        marker="o",
+        color=TEAL[5],
+        linewidth=2.2,
+        markersize=6,
+        label=r"Expected samples per hit $(1/p_k)$",
+    )
     ax.fill_between(x, plot_df["E_1hit_lo"], plot_df["E_1hit_hi"], color=TEAL[1], alpha=0.25, linewidth=0)
 
     for spine in ("top", "right"):
@@ -523,12 +559,19 @@ def plot_samples_per_hit(samples_df: pd.DataFrame, output_path: Path) -> None:
 
     ax.set_xticks(full_k)
     ax.set_xlim(full_k.min() - 0.6, full_k.max() + 0.6)
-    ax.set_xlabel("# of conditioned descriptors k")
-    ax.set_ylabel("Samples per hit (1/p_k)")
+    ax.set_xlabel("# of conditioned descriptors $k$", labelpad=8)
+    ax.set_ylabel("Samples per hit $(1/p_k)$", labelpad=8)
 
-    ax.legend(loc="upper left", frameon=True, fancybox=True, framealpha=0.9, fontsize=10)
-    plt.tight_layout()
-    fig.savefig(output_path, format="pdf", bbox_inches="tight", dpi=300)
+    ax.legend(
+        loc="upper right",
+        bbox_to_anchor=(0.98, 0.98),
+        frameon=True,
+        fancybox=True,
+        framealpha=0.9,
+        fontsize=11,
+    )
+    fig.subplots_adjust(left=0.19, bottom=0.20, right=0.98, top=0.97)
+    fig.savefig(output_path, format=output_path.suffix.lstrip("."), dpi=300)
     plt.close(fig)
 
 

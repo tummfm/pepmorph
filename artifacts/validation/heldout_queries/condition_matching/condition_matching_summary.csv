@@ -1,0 +1,5 @@
+metric,k,n,effectiveness
+Within 10% of target 3D descriptors,9842,12899,0.7630048840995426
+Within 10% of target AP,7062,8689,0.8127517550926459
+SA/no-SA classification,7937,8715,0.910728628800918
+Within 10% of all target descriptors,10058,14724,0.6831024178212443

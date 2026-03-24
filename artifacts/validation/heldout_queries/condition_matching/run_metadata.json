@@ -1,0 +1,11 @@
+{
+  "queries_jsonl": "/home/go46vuw/pepmorph/artifacts/validation/heldout_queries/heldout_queries_generation.jsonl",
+  "metrics_csv": "/home/go46vuw/pepmorph/artifacts/validation/heldout_queries/peptide_metrics.csv",
+  "checkpoint": "/home/go46vuw/pepmorph/artifacts/models/ap_model/peptide_predictor.pt",
+  "device": "cuda",
+  "tol_pct": 0.1,
+  "sa_threshold": 0.5,
+  "beta_threshold": 0.0,
+  "n_queries": 15000,
+  "n_generated_sequences": 15000
+}
