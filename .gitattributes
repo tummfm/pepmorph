@@ -2,7 +2,6 @@
 artifacts/models/ap_model/peptide_predictor.pt filter=lfs diff=lfs merge=lfs -text
 artifacts/models/masked_cvae/finetuned_cvae.pt filter=lfs diff=lfs merge=lfs -text
 artifacts/models/**/*.pt filter=lfs diff=lfs merge=lfs -text
-*.xtc filter=lfs diff=lfs merge=lfs -text
  filter=lfs diff=lfs merge=lfs -text
 *.xvg filter=lfs diff=lfs merge=lfs -text
 *.xvg !text !filter !merge !diff
