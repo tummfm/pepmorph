@@ -2,7 +2,7 @@
 
 ![PepMorph pipeline](artifacts/pepmorph.gif)
 
-This repository implements the **PepMorph** pipeline for the paper *Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling* - Costa & Zavadlav, (2025). It provides a conditional, mask-aware CVAE for peptide generation and utilities to train, validate, and compare generated sequences against morphology targets.
+This repository implements the **PepMorph** pipeline for the paper *Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling* (Costa and Zavadlav, *ACS Nano*, 2026, [10.1021/acsnano.6c02811](https://doi.org/10.1021/acsnano.6c02811)). It provides a conditional, mask-aware CVAE for peptide generation and utilities to train, validate, and compare generated sequences against morphology targets.
 
 ## Abstract
 
@@ -94,14 +94,16 @@ Outputs go to `artifacts/validation/{gen_peptides,results,figs}`.
 If you use PepMorph, please cite:
 
 ```bibtex
-@misc{costa2025morphologyspecificpeptidediscoverymasked,
-      title={Morphology-Specific Peptide Discovery via Masked Conditional Generative Modeling}, 
-      author={Nuno Costa and Julija Zavadlav},
-      year={2025},
-      eprint={2509.02060},
-      archivePrefix={arXiv},
-      primaryClass={q-bio.BM},
-      url={https://arxiv.org/abs/2509.02060}, 
+@article{costa2026morphologyaware,
+      title={Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling},
+      author={Costa, Nuno and Zavadlav, Julija},
+      journal={ACS Nano},
+      year={2026},
+      volume={20},
+      number={17},
+      pages={13323--13338},
+      doi={10.1021/acsnano.6c02811},
+      url={https://doi.org/10.1021/acsnano.6c02811}
 }
 ```
 ---

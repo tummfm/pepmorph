@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: PepMorph
+message: "If you use this repository, please cite the PepMorph paper."
+type: software
+license: MIT
+authors:
+  - family-names: Costa
+    given-names: Nuno
+  - family-names: Zavadlav
+    given-names: Julija
+repository-code: https://github.com/tummfm/pepmorph
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Costa
+      given-names: Nuno
+    - family-names: Zavadlav
+      given-names: Julija
+  title: "Morphology-Aware Peptide Discovery via Masked Conditional Generative Modeling"
+  journal: ACS Nano
+  year: 2026
+  volume: 20
+  issue: 17
+  start: 13323
+  end: 13338
+  doi: 10.1021/acsnano.6c02811
+  url: https://doi.org/10.1021/acsnano.6c02811
