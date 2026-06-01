@@ -1,6 +1,8 @@
-.xtc filter=lfs diff=lfs merge=lfs -text
-artifacts/models/ap_model/peptide_predictor.pt filter=lfs diff=lfs merge=lfs -text
-artifacts/models/masked_cvae/finetuned_cvae.pt filter=lfs diff=lfs merge=lfs -text
+# Model binaries: keep in Git LFS
 artifacts/models/**/*.pt filter=lfs diff=lfs merge=lfs -text
- filter=lfs diff=lfs merge=lfs -text
-*.xvg !text !filter !merge !diff
+
+# Preview trajectories: store in normal Git, not LFS
+*.xtc -filter -diff -merge -text
+
+# GROMACS XVG analysis files: store as normal Git text files
+*.xvg text eol=lf
